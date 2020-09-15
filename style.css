@@ -98,6 +98,9 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    padding: 3rem;
+  }
   .signup-content {
     display: flex;
   }
