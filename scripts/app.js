@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
   //validate login
   if (validateName() && validateEmail() && validatePass() && validateRepass()) {
     localStorage.user = JSON.stringify(login);
-    window.location.href = "../pages/login.html";
+    window.location.href = "./pages/login.html";
   }
 });
 
