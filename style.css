@@ -23,9 +23,6 @@ body {
 a {
   color: #222;
 }
-/* .register-form {
-  margin-left: 0;
-} */
 .signup-content h2,
 .signin-content h2 {
   font-size: 2rem;
@@ -88,9 +85,7 @@ img {
 .form-submit:hover {
   background: #4292dc;
 }
-.success.good.color {
-  color: red;
-}
+
 @media screen and (min-width: 100px) {
   .container {
     padding: 30px;

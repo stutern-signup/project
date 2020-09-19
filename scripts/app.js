@@ -17,18 +17,19 @@ form.addEventListener("submit", (e) => {
 
   //validate login
   if (validateName() && validateEmail() && validatePass() && validateRepass()) {
-    window.location.href = "./pages/login.html";
+    localStorage.user = JSON.stringify(login);
+    window.location.href = "/pages/login.html";
   }
 });
+
 function validateName() {
   const value = name.value.trim();
-  regex = /^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$/;
+  const regex = /^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$/;
   if (regex.test(value) == false) {
     invalidInput(name, "not a valid username", "visible", "red");
   } else {
     validInput(name, "hidden");
     login.name = `${value}`;
-    storeInLocal(login);
     return true;
   }
 }
@@ -41,13 +42,12 @@ function validateEmail() {
   } else {
     validInput(email, "hidden");
     login.email = `${emailValue}`;
-    storeInLocal(login);
     return true;
   }
 }
 function validatePass() {
   const passwordValue = password.value.trim();
-  regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$/;
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$/;
 
   if (regex.test(passwordValue) == false) {
     invalidInput(
@@ -69,7 +69,6 @@ function validateRepass() {
   } else {
     validInput(rePassword, "hidden");
     login.password = `${passwordValue}`;
-    storeInLocal(login);
     return true;
   }
 }
@@ -82,8 +81,4 @@ function invalidInput(para, message, visibility, color) {
 function validInput(para, visibility) {
   para.nextElementSibling.style.visibility = visibility;
   para.nextElementSibling.innerHTML = "input is valid";
-}
-
-function storeInLocal(para) {
-  localStorage.user = JSON.stringify(para);
 }
