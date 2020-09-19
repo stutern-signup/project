@@ -41,10 +41,10 @@
     const myRepeatPassword = repeatPassword.value.trim();
 
     //variables to be stored in local storage
-    const storeDetails = [{
+    const loginDetails = {
         username: myName,
         userPassword: myPassword,
-    }];
+    };
 
     if(myName === '' || myPhone === '' || myEmail === '' || myPassword === '' || myRepeatPassword === ''){
         alert('fields cannot be empty');
@@ -64,7 +64,7 @@
 
     //saving credentials to local storage
 
-        localStorage.setItem("myDetails", JSON.stringify(storeDetails))
+        localStorage.user = JSON.stringify(loginDetails)
     }
 })
 

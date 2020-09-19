@@ -33,7 +33,9 @@ const signinName = loginName.value.trim();
 const signinPassword = loginPassword.value.trim();
 
 //getting Items from local Storage
-const local = JSON.parse(localStorage.storeDetails)
+const local = JSON.parse(localStorage.user)
+
+//checking the inputs
 
     if(signinName === '' || signinPassword === ''){
         alert('Fields cannot be empty');
@@ -41,19 +43,14 @@ const local = JSON.parse(localStorage.storeDetails)
     } else if (loginName.className !== "valid" || loginPassword.className !== "valid" ){
         alert("Invalid Input");
     }
-        if (storeDetails[i].username === myName && storeDetails[i].userPassword === myPassword){
-                alert("welcome") 
-            }      
+    else if (local.username !== signinName || local.userPassword !== signinPassword){
+        alert('wrong username or password')
+    }      
+    else if (local.username === signinName && local.userPassword === signinPassword){
+        window.location.href = 'landingPage.html'
+    }      
 });
 
-// const getCredentials = JSON.parse(localStorage.getItem("myDetails"))
-
-
-//for(let i = 0; i < storeDetails.length; i++){
-// //storing array in localStorage
-// var colors = ["red","blue","green"];
-// localStorage.setItem("my_colors", JSON.stringify(colors)); //store colors
-// var storedColors = JSON.parse(localStorage.getItem("my_colors")); //get them back
 
 
 
