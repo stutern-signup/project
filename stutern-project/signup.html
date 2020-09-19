@@ -11,55 +11,58 @@
 </head>
 <body>
         <div class="flex-container">
-            <div class="input-div">
-                <h1 class="display-5">Sign Up</h1> 
-                <div class="mb-3 mt-5">
-                    <i class="fas fa-address-book 5px"></i>
-                    <label>
-                        <input type="text" class="text-line" placeholder="Name" id="Name">
-                        </label>
-                    </div>
-                <div class="my-3">
-                    <i class="fas fa-envelope"></i>
-                    <label>
-                        <input type="email" class="text-line" placeholder="Email" id="email">
-                        </label>
-                    </div>
-                <div class="my-3">
-                    <i class="fas fa-lock"></i>
-                    <label>
-                        <input type="password" class="text-line" placeholder="Password" id="password">
-                        </label>
-                    </div>
-                <div class="my-3">
-                    <i class="fas fa-lock"></i>
-                        <label>
-                            <input type="password" class="text-line" placeholder="Repeat Password" id="repeat-password">
-                        </label>
-                    </div>
-
-                <div class="form-check my-4">
-                    <div class="terms">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                         I Agree to <a href="#">Terms and Conditions</a>
-                        </label>
-                    </div>
-                </div>
-
-                    <div>
-                        <button type="submit" class="btn btn-primary btn-lg">Register</button>
-                    </div>
-                    <br>
-                    <a href="#" class="mt-4">Already a Member?</a>   
-                    </div>
-
-                    <div class="image-container mb-5">
-                            <img src="img1.png" alt="">
+                <form class="input-div">
+                    <h1 class="display-5">Sign Up</h1> 
+                    <div class="mb-3 mt-5">
+                        <i class="fas fa-address-book 5px"></i>
+                            <input type="name" class="text-line text-muted" placeholder="Name" id="name" style="height: 45px;">
+                            <p>Must be Alphabets</p>                       
                         </div>
-        </div>          
     
-
+                    <div class="my-3">
+                        <i class="fas fa-envelope"></i>
+                            <input type="email" class="text-line" placeholder="Email" id="email" style="height: 45px;">
+                            <p>Must be a valid email address e.g ag@mydomain.com</p>
+                        </div>
+    
+                    <div class="my-3">
+                        <i class="fas fa-phone-alt"></i>
+                            <input type="phoneNumber" class="text-line" placeholder="Phone number" id="phone" style="height: 45px;">
+                            <p>Must be a valid number (11 digits)</p>
+                        </div>
+    
+                    <div class="my-3">
+                        <i class="fas fa-lock"></i>
+                            <input type="password" class="text-line" placeholder="Password" id="password" style="height: 45px;">
+                            <p>Must be alphanumeric (@, _ and - are allowed) and be 8-20 characters</p>
+                        </div>
+    
+                    <div class="my-3">
+                        <i class="fas fa-lock"></i>
+                                <input type="password" class="text-line" placeholder="Repeat Password" id="repeat-password" style="height: 45px;">
+                                <p>must be alphanumeric (@, _ and - are allowed) and be 8-20 characters</p>
+                        </div>
+    
+                    <div class="form-check my-4">
+                        <div class="terms">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                             I Agree to <a href="#">Terms and Conditions</a>
+                        </div>
+                    </div>
+    
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                        </div>
+                        <br>
+                        <a href="loginpage.html" class="mt-4">Already a Member?</a>  
+                  </form>
+                        <div class="image-container mb-5">
+                                <img src="signup-image.jpg" alt="">
+                            </div> 
+        </div>                        
+    
+<script src="signup.js"></script>
     
 </body>
 </html>
