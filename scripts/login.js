@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
   const pass = loginPass.value.trim();
 
   if (name == local.name && pass == local.password) {
-    window.location.href = "../pages/landing.html";
+    window.location.href = "./landing.html";
   } else {
     invalidInput(loginName, "Wrong name", "visible", "red");
     invalidInput(loginPass, "Wrong password", "visible", "red");
