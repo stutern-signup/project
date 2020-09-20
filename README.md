@@ -1,2 +1,2 @@
 # project
-# https://stutern-signup.netlify.app/
+# https://stutern-signup.github.io/project/
