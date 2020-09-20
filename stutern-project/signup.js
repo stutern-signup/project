@@ -41,7 +41,7 @@
     const myRepeatPassword = repeatPassword.value.trim();
 
     //variables to be stored in local storage
-    const loginDetails = {
+    const storeDetails = {
         username: myName,
         userPassword: myPassword,
     };
@@ -58,13 +58,12 @@
         alert("Invalid Input")
 
     }else if(passwords.className !== "valid" || repeatPassword.className !== "valid"){
-        alert("Incomplete Passwords")
-    }else{
-        window.location.href = "loginpage.html";
+        alert("Incomplete Passwords");
+
+    }else{ window.location.href = "loginpage.html";
 
     //saving credentials to local storage
-
-        localStorage.user = JSON.stringify(loginDetails)
+        localStorage.user = JSON.stringify(storeDetails)
     }
 })
 

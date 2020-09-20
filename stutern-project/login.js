@@ -36,21 +36,19 @@ const signinPassword = loginPassword.value.trim();
 const local = JSON.parse(localStorage.user)
 
 //checking the inputs
-
     if(signinName === '' || signinPassword === ''){
         alert('Fields cannot be empty');
+        return false
         
     } else if (loginName.className !== "valid" || loginPassword.className !== "valid" ){
         alert("Invalid Input");
-    }
-    else if (local.username !== signinName || local.userPassword !== signinPassword){
-        alert('wrong username or password')
-    }      
-    else if (local.username === signinName && local.userPassword === signinPassword){
-        window.location.href = 'landingPage.html'
-    }      
+        return false
+    }else if (local.username !== signinName || local.userPassword !== signinPassword){
+        alert("wrong username or password")
+        return false
+    } else if (local.username === signinName && local.userPassword === signinPassword){
+    window.location.href = "landingPage.html" }      
 });
-
 
 
 
